@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "datrat.hqmquestrewardingsystem.mixin",
+  "refmap": "mixins.hqm-questrewardingsystem.refmap.json",
+  "target": "@env(DEFAULT)",
+  "mixins": [
+    "MixinQuestTask"
+  ]
+}

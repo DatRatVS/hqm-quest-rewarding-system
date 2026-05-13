@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "hqm-questrewardingsystem",
+    "name": "Hardcore Questing Mode: Quest Rewarding System",
+    "description": "Adds an HQM-compatible Quest Rewarding System block that binds to a selected quest and claims fixed rewards into its internal inventory.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["datrat"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": ["required-after:HardcoreQuesting"]
+  }
+]
