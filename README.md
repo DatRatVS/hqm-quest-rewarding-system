@@ -73,30 +73,6 @@ Most behavior is implemented as a normal Forge block and tile entity.
 - **Fallback Tick Check**: Performs a low-frequency retry on loaded tiles to catch missed completion paths, offline-player changes, and inventory-space changes.
 - **Scoped Patch**: The mixin only observes quest completion; vanilla HQM reward screens and Quest Delivery Systems are not replaced.
 
-## Compatibility Notes
-
-- **Mod ID**: `hqm-questrewardingsystem`
-- **Package**: `datrat.hqmquestrewardingsystem`
-- **Minecraft**: `1.7.10`
-- **Forge**: `10.13.4.1614`
-- **HQM Target**: `HQM-The Journey-4.4.4.jar`
-- **UniMixins Target**: `unimixins-all-1.7.10-0.3.0.jar`
-- **Output JAR**: `hqm-questrewardingsystem-1.7.10-1.0.0.jar`
-
-HQM and UniMixins are compile/runtime dependencies and are not shaded into this addon.
-
-## Manual Testing
-
-Recommended in-pack checks:
-
-- Bind the block to a normal fixed-reward quest with the HQM quest book.
-- Complete the quest and confirm rewards enter the block, not the player inventory.
-- Fill the 9-slot inventory, complete a quest, then extract space and confirm the reward claims later.
-- Verify hoppers or pipes can extract from the block and cannot insert into it.
-- Test `ALL`, `ANY`, and `RANDOM` HQM party reward settings.
-- Confirm pick-one reward quests are rejected during binding.
-- Confirm reputation rewards apply for fixed-plus-reputation and reputation-only quests.
-
 ## Build Instructions
 
 Required local dependency jars go in `deps/`:
@@ -105,8 +81,6 @@ Required local dependency jars go in `deps/`:
 - `deps/+unimixins-all-1.7.10-0.3.0.jar`
 
 Example placeholder files are included in `deps/` to document the expected jar names.
-
-ForgeGradle `1.7.10` expects an older Java runtime. Java 8 is recommended:
 
 ```bash
 JAVA_HOME=/usr/lib/jvm/java-8-openjdk ./gradlew --no-daemon clean build
