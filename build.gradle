@@ -19,7 +19,7 @@ apply plugin: 'forge'
 
 import net.minecraftforge.gradle.delayed.DelayedString
 
-version = '1.0.0'
+version = '1.0.1'
 group = 'datrat.hqmquestrewardingsystem'
 archivesBaseName = 'hqm-questrewardingsystem-1.7.10'
 def forgeVersion = '1.7.10-10.13.4.1614-1.7.10'

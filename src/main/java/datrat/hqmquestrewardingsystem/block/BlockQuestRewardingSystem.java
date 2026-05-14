@@ -28,10 +28,13 @@ public final class BlockQuestRewardingSystem extends BlockContainer {
     private static final Random DROP_RANDOM = new Random();
 
     @SideOnly(Side.CLIENT)
-    private IIcon unboundIcon;
+    private IIcon topBottomIcon;
 
     @SideOnly(Side.CLIENT)
-    private IIcon boundIcon;
+    private IIcon unboundSideIcon;
+
+    @SideOnly(Side.CLIENT)
+    private IIcon boundSideIcon;
 
     public BlockQuestRewardingSystem() {
         super(Material.rock);
@@ -44,14 +47,18 @@ public final class BlockQuestRewardingSystem extends BlockContainer {
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister register) {
-        this.unboundIcon = register.registerIcon("hqm:hqmItemBarrelEmpty");
-        this.boundIcon = register.registerIcon("hqm:hqmItemBarrel");
+        this.topBottomIcon = register.registerIcon("hqm:hqmItemBarrelEmpty");
+        this.unboundSideIcon = register.registerIcon(QuestRewardingSystemMod.MODID + ":hqmItemBarrelEmptyLoot");
+        this.boundSideIcon = register.registerIcon(QuestRewardingSystemMod.MODID + ":hqmItemBarrelLoot");
     }
 
     @Override
     @SideOnly(Side.CLIENT)
     public IIcon getIcon(int side, int meta) {
-        return meta == 1 ? this.boundIcon : this.unboundIcon;
+        if (side == 0 || side == 1) {
+            return this.topBottomIcon;
+        }
+        return meta == 1 ? this.boundSideIcon : this.unboundSideIcon;
     }
 
     @Override

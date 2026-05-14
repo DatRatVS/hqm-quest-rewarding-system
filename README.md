@@ -89,5 +89,5 @@ JAVA_HOME=/usr/lib/jvm/java-8-openjdk ./gradlew --no-daemon clean build
 The built JAR will be located at:
 
 ```text
-build/libs/hqm-questrewardingsystem-1.7.10-1.0.0.jar
+build/libs/hqm-questrewardingsystem-1.7.10-1.0.1.jar
 ```
